@@ -1,0 +1,1 @@
+export default {"projectId": "conjuga-artur", "appId": "1:84832275171:web:e8b99cd9d3f76a454dd3d6", "storageBucket": "conjuga-artur.firebasestorage.app", "apiKey": "AIzaSyBSNCRznYJPhDS-TkxUNxTTk7VA-P4JKXM", "authDomain": "conjuga-artur.firebaseapp.com", "messagingSenderId": "84832275171"};

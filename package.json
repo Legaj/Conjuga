@@ -1,0 +1,1 @@
+{"name":"conjuga-study","version":"4.0.0","private":true,"type":"module","scripts":{"start":"python -m http.server 5173","test":"node tests/core.test.mjs","build:standalone":"python build_standalone.py","build:data":"python build_data.py && python create_illustrations.py && python build_standalone.py"}}

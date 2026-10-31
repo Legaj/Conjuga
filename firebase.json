@@ -1,0 +1,47 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "firestore.rules",
+      "**/.*",
+      "**/node_modules/**",
+      "build_data.py",
+      "tests/**",
+      "*.txt",
+      "*.md",
+      "*.mjs",
+      "*.zip",
+      "*.py",
+      "package.json",
+      "firebase-config.example.js",
+      "start.html"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "database": "conjuga",
+    "edition": "enterprise",
+    "location": "europe-west1"
+  },
+  "auth": {
+    "authorizedDomains": [
+      "localhost",
+      "conjuga-artur.firebaseapp.com",
+      "conjuga-artur.web.app"
+    ],
+    "providers": {
+      "anonymous": true,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "Conjuga",
+        "supportEmail": "artur.jed09@gmail.com"
+      }
+    }
+  }
+}
