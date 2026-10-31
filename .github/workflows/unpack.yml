@@ -1,0 +1,26 @@
+name: Unpack Conjuga source
+on:
+  push:
+    paths:
+      - ".github/workflows/unpack.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Extract tested source
+        run: |
+          unzip -o conjuga-source.zip -d .
+          rm -f conjuga-source.zip
+      - name: Commit site files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish Conjuga v4.2 balanced training and focused UI" || exit 0
+          git push origin HEAD:main
